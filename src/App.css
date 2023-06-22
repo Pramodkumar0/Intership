@@ -1,0 +1,97 @@
+*{
+  background-image: linear-gradient(to right, rgb(87, 87, 243), rgb(53, 52, 52));
+  background-repeat: no-repeat;
+  
+}
+.head{
+  color: rgb(9, 219, 9);
+  text-align: center;
+  font-size: 32px;
+  opacity: 0.6;
+
+  
+}
+@keyframes sliderup {
+  from
+  {
+    transform:  translateY(-10px);
+  }
+  to{
+    transform:  translateX(30);
+
+  }
+}
+.head{
+  animation-name: sliderup;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+
+}
+.gridcontainer{
+  
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: 200px 200px 200px 200px;
+  /* margin-left: 5%; */
+  /* padding: 10px; */
+  /* padding-top: -90%; */
+  padding-left: 80px;
+  background-repeat: no-repeat;
+  
+ 
+}
+
+.grid-item{
+  cursor: pointer;
+ background: white; 
+ border-radius: 13px;
+  margin: 30px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 19px;
+}
+
+.grid-item:hover{
+  transform: scale(0.9)
+}
+.grid-item>h3{
+  background: white;
+  color: rgb(8, 8, 198);
+ 
+
+}
+.grid-item>p{
+  
+  background: white;
+  font-size: 14px;
+  line-height: 1%;
+  color: rgb(87, 87, 235) ;
+}
+
+@media screen and (max-width:1115px ) {
+  .gridcontainer{
+    grid-template-columns: auto auto auto;
+    grid-template-rows: max-content;
+  }
+ 
+}
+
+@media screen and (max-width:800px ) {
+  .gridcontainer{
+    grid-template-columns: auto auto;
+    grid-template-rows: max-content;
+  }
+ 
+}
+
+@media screen and (max-width:500px ) {
+  .gridcontainer{
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+  }
+ 
+}
